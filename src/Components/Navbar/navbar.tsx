@@ -1,14 +1,17 @@
+import { Link } from 'react-router-dom';
 import './navbar.scss';
 
 function Navbar() {
     return (
         <nav>
             <div className='logo'>
-                <img src="/logo192.png"></img>
+                <Link className="link" to="/">
+                    <img src="/logo192.png"></img>
+                </Link>
             </div>
             <div className='nav-tabs'>
                 <div className='tab'>
-                    <span>Home</span>
+                    <Link className='link' to="/"><span>Home</span></Link>
                 </div>
                 <div className='tab'>
                     <span>About</span>
@@ -17,7 +20,7 @@ function Navbar() {
                     <span>Services</span>
                 </div>
                 <div className='tab'>
-                    <span>Contact</span>
+                    <Link className="link" to="/Contact"><span>Contact</span></Link>
                 </div>
             </div>
         </nav>
